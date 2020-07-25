@@ -2,5 +2,5 @@ package example;
 
 public interface NumberGenerator {
 
-    String generateAnswer();
+    StringBuffer generateAnswer();
 }
