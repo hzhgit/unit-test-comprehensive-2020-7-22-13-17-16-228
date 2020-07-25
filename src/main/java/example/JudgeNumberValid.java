@@ -1,5 +1,5 @@
 package example;
 
-public interface JudgeGuessNumberValid {
+public interface JudgeNumberValid {
     boolean judgeGuessValid();
 }

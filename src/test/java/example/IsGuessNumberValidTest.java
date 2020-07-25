@@ -11,7 +11,7 @@ public class IsGuessNumberValidTest {
     public void should_false_when_judge_guess_number_valid_given_1123() {
         //given
         String number = "1123";
-        JudgeGuessNumberValid isGuessNumberValid = Mockito.mock(JudgeGuessNumberValid.class);
+        JudgeNumberValid isGuessNumberValid = Mockito.mock(JudgeNumberValid.class);
         when(isGuessNumberValid.judgeGuessValid()).thenReturn(false);
 
         //when
