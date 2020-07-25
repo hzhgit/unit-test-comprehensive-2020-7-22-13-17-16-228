@@ -15,11 +15,11 @@ public class GuessNumberGameTest {
         String actual = guessNumberGame.guess(guess);
 
         //then
-        assertEquals("4A0B",actual);
+        assertEquals("4A0B", actual);
     }
 
     @Test
-    public void should_return_0A0B_when_answer_is_1234_given_5678(){
+    public void should_return_0A0B_when_answer_is_1234_given_5678() {
         //given
         String guess = "5678";
         GuessNumberGame guessNumberGame = new GuessNumberGame();
@@ -28,6 +28,19 @@ public class GuessNumberGameTest {
         String actual = guessNumberGame.guess(guess);
 
         //then
-        assertEquals("0A0B",actual);
+        assertEquals("0A0B", actual);
+    }
+
+    @Test
+    public void should_return_2A2B_when_answer_is_1234_given_1243() {
+        //given
+        String guess = "1243";
+        GuessNumberGame guessNumberGame = new GuessNumberGame();
+
+        //when
+        String actual = guessNumberGame.guess(guess);
+
+        //then
+        assertEquals("2A2B", actual);
     }
 }
