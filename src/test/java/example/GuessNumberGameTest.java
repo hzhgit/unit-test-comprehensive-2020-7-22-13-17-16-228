@@ -1,8 +1,13 @@
 package example;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
+import java.util.Arrays;
+import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.when;
 
 public class GuessNumberGameTest {
     @Test
@@ -87,5 +92,19 @@ public class GuessNumberGameTest {
 
         //then
         assertEquals("0A2B", actual);
+    }
+
+    @Test
+    void should_return_true_when_generate_number_given_not_repeat() {
+        //given
+        NumberGenerator numberGenerator = Mockito.mock(NumberGenerator.class);
+        when(numberGenerator.generateAnswer()).thenReturn("1234");
+        String generatedResult = numberGenerator.generateAnswer();
+
+        //when
+        int actual = new HashSet<String>(Arrays.asList(generatedResult.split(""))).size();
+
+        //then
+        assertEquals(4, actual);
     }
 }
