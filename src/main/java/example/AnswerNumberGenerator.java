@@ -5,16 +5,15 @@ import java.util.Random;
 public class AnswerNumberGenerator implements NumberGenerator {
 
     @Override
-    public StringBuffer generateAnswer() {
-        StringBuffer answer = new StringBuffer();
+    public String generateAnswer() {
+        String answer = "";
         Random random = new Random();
 
         while (answer.length() < 4) {
             int num = random.nextInt(10);
             if (answer.indexOf(String.valueOf(num)) < 0)
-                answer.append(num);
+                answer += String.valueOf(num);
         }
-
         return answer;
     }
 }
