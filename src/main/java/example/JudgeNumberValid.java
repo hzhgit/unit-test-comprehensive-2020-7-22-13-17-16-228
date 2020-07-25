@@ -1,5 +1,5 @@
 package example;
 
 public interface JudgeNumberValid {
-    boolean judgeGuessValid();
+    boolean judgeGuessValid(String number);
 }

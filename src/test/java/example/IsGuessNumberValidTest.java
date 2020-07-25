@@ -12,11 +12,24 @@ public class IsGuessNumberValidTest {
         //given
         String number = "1123";
         JudgeNumberValid isGuessNumberValid = Mockito.mock(JudgeNumberValid.class);
-        when(isGuessNumberValid.judgeGuessValid()).thenReturn(false);
+        when(isGuessNumberValid.judgeGuessValid(number)).thenReturn(false);
 
         //when
-        boolean actual = isGuessNumberValid.judgeGuessValid();
+        boolean actual = isGuessNumberValid.judgeGuessValid(number);
 
+        //then
+        assertEquals(false, actual);
+    }
+
+    @Test
+    public void should_return_false_when_judge_guess_number_valid_given_11() {
+        //given
+        String number = "11";
+        JudgeNumberValid isGuessNumberValid = Mockito.mock(JudgeNumberValid.class);
+        when(isGuessNumberValid.judgeGuessValid(number)).thenReturn(false);
+
+        //when
+        boolean actual = isGuessNumberValid.judgeGuessValid(number);
         //then
         assertEquals(false, actual);
     }
