@@ -11,7 +11,7 @@ public class AnswerNumberGenerator implements NumberGenerator {
 
         while (answer.length() < 4) {
             int num = random.nextInt(10);
-            if (answer.indexOf(String.valueOf(num)) < 0)
+            if (!answer.contains(String.valueOf(num)))
                 answer += String.valueOf(num);
         }
         return answer;
