@@ -5,12 +5,9 @@ import java.util.Scanner;
 public class GuessNumberGameMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        //generate answer
         AnswerNumberGenerator answerNumberGenerator = new AnswerNumberGenerator();
         String answer = answerNumberGenerator.generateAnswer();
-        // judge guess number is valid
         JudgeGuessNumberValid judgeGuessNumberValid = new JudgeGuessNumberValid();
-        // init the game
         GuessNumberGame guessNumberGame = new GuessNumberGame(answer);
 
         System.out.println("answer : " + answer);
