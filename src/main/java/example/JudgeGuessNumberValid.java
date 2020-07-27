@@ -5,10 +5,10 @@ import java.util.HashSet;
 
 public class JudgeGuessNumberValid implements JudgeNumberValid{
     @Override
-    public boolean judgeGuessValid(String number) {
-        if(number.length() != 4 || !(number.matches("[0-9]+"))) {
+    public boolean judgeGuessValid(String numberString) {
+        if(numberString.length() != 4 || !(numberString.matches("[0-9]+"))) {
             return false;
         }
-        return new HashSet<>(Arrays.asList(number.split(""))).size() == 4;
+        return new HashSet<>(Arrays.asList(numberString.split(""))).size() == 4;
     }
 }
