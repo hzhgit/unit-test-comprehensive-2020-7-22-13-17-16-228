@@ -3,6 +3,9 @@ package example;
 import java.util.Scanner;
 
 public class GuessNumberGameMain {
+
+    private static final String CORRECT_MESSAGE = "4A0B";
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         AnswerNumberGenerator answerNumberGenerator = new AnswerNumberGenerator();
@@ -19,8 +22,7 @@ public class GuessNumberGameMain {
             count++;
             if (judgeGuessNumberValid.judgeGuessValid(guess)) {
                 String result = guessNumberGame.guess(guess);
-                //todo 4A0B
-                if (result.equals("4A0B")) {
+                if (result.equals(CORRECT_MESSAGE)) {
                     System.out.println(result);
                     break;
                 } else {
