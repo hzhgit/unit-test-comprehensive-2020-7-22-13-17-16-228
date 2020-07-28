@@ -10,13 +10,12 @@ public class GuessNumberGame {
     }
 
     public String guess(String guess) {
-        int rightNumber = getRightNumber(guess);
-        int rightPositionNumber = getRightPositionNumber(guess);
+        int rightNumber = getRightNumberCount(guess);
+        int rightPositionNumber = getRightPositionNumberCount(guess);
         return rightPositionNumber + CORRECT_NUMBER_COUNT + (rightNumber - rightPositionNumber) + CORRECT_POSTION_COUNT;
     }
 
-    //todo return count
-    private int getRightNumber(String guess) {
+    private int getRightNumberCount(String guess) {
         int count = 0;
         for (int i = 0; i < guess.length(); i++) {
             for (int j = 0; j < guess.length(); j++) {
@@ -28,7 +27,7 @@ public class GuessNumberGame {
         return count;
     }
 
-    private int getRightPositionNumber(String guess) {
+    private int getRightPositionNumberCount(String guess) {
         int count = 0;
         for (int i = 0; i < guess.length(); i++) {
             if (guess.charAt(i) == this.answer.charAt(i)) {
