@@ -15,13 +15,13 @@ public class AnswerNumberGenerator implements NumberGenerator {
 
         int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         List numberList = new ArrayList();
-        for (int i = 0; i < numbers.length; i++) {
-            numberList.add(numbers[i]);
+        for (int index = 0; index < numbers.length; index++) {
+            numberList.add(numbers[index]);
         }
         Collections.shuffle(numberList);
 
-        for (int i = 0; i < ANSWER_STRING_LENGTH; i++){
-            answer.append(numberList.get(i));
+        for (int index = 0; index < ANSWER_STRING_LENGTH; index++){
+            answer.append(numberList.get(index));
         }
 
         return answer.toString();
