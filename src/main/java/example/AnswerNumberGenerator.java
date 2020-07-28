@@ -12,8 +12,10 @@ public class AnswerNumberGenerator implements NumberGenerator {
         while (answer.length() < 4) {
             int num = random.nextInt(10);
             if (!answer.toString().contains(String.valueOf(num)))
-                answer.append(String.valueOf(num));
+                answer.append(num);
         }
+        //todo
+//        Collections.shuffle();
         return answer.toString();
     }
 }

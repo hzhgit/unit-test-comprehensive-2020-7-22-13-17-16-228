@@ -6,6 +6,7 @@ import java.util.HashSet;
 public class JudgeGuessNumberValid implements JudgeNumberValid{
     @Override
     public boolean judgeGuessValid(String numberString) {
+        //TODO magic number,正则
         if(numberString.length() != 4 || !(numberString.matches("[0-9]+"))) {
             return false;
         }
