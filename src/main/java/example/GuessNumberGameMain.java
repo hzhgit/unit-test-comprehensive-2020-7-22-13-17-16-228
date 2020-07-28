@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class GuessNumberGameMain {
     public static void main(String[] args) {
-        // todo sc
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         AnswerNumberGenerator answerNumberGenerator = new AnswerNumberGenerator();
         String answer = answerNumberGenerator.generateAnswer();
         JudgeGuessNumberValid judgeGuessNumberValid = new JudgeGuessNumberValid();
@@ -14,9 +13,9 @@ public class GuessNumberGameMain {
         System.out.println("answer : " + answer);
 
         int count = 0;
-        while (sc.hasNextLine()) {
+        while (scanner.hasNextLine()) {
             String guess = "";
-            guess += sc.next();
+            guess += scanner.next();
             count++;
             if (judgeGuessNumberValid.judgeGuessValid(guess)) {
                 String result = guessNumberGame.guess(guess);
