@@ -6,6 +6,7 @@ public class GuessNumberGameMain {
 
     private static final String CORRECT_MESSAGE = "4A0B";
     private static final int MAX_GUESS_TIMES = 6;
+    private static final String WRONG_INPUT_MESSAGE = "Wrong Input,Input again";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -30,7 +31,7 @@ public class GuessNumberGameMain {
                     System.out.println(result);
                 }
             } else {
-                System.out.println("Wrong Input£¬Input again");
+                System.out.println(WRONG_INPUT_MESSAGE);
             }
             if (count == MAX_GUESS_TIMES)
                 break;
