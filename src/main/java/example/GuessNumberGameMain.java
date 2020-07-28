@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class GuessNumberGameMain {
 
     private static final String CORRECT_MESSAGE = "4A0B";
+    private static final int MAX_GUESS_TIMES = 6;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -31,8 +32,7 @@ public class GuessNumberGameMain {
             } else {
                 System.out.println("Wrong Input£¬Input again");
             }
-            //todo magic number
-            if (count == 6)
+            if (count == MAX_GUESS_TIMES)
                 break;
         }
     }
